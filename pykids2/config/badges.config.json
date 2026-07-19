@@ -1,0 +1,32 @@
+{
+  "badges": [
+    {
+      "id": "first-steps",
+      "title": "First Steps",
+      "icon": "👣",
+      "description": "Complete your very first lesson",
+      "rule": { "type": "lesson-count", "count": 1 }
+    },
+    {
+      "id": "high-five",
+      "title": "High Five",
+      "icon": "🖐️",
+      "description": "Complete 5 lessons total",
+      "rule": { "type": "lesson-count", "count": 5 }
+    },
+    {
+      "id": "python-basics-champion",
+      "title": "Python Basics Champion",
+      "icon": "🏆",
+      "description": "Finish every lesson in the Python Basics track",
+      "rule": { "type": "track-complete", "track": "python-basics" }
+    },
+    {
+      "id": "code-marathon",
+      "title": "Code Marathon",
+      "icon": "🏃",
+      "description": "Complete 15 lessons total across all tracks",
+      "rule": { "type": "lesson-count", "count": 15 }
+    }
+  ]
+}
