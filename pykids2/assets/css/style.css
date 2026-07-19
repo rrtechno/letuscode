@@ -345,3 +345,54 @@ h1, h2, h3, .display {
   background: var(--leaf);
   box-shadow: 0 4px 0 #367a58;
 }
+
+.badges-link {
+  display: block;
+  text-align: center;
+  margin-top: 24px;
+  color: var(--coral);
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* ---------- Badge gallery ---------- */
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+}
+.badge-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 20px 14px;
+  text-align: center;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.08);
+}
+.badge-card h3 { font-size: 1rem; margin: 6px 0 4px; }
+.badge-card p { font-size: 0.82rem; color: #777; margin: 0; }
+.badge-icon { font-size: 2.4rem; margin-bottom: 4px; }
+.badge-card.locked { opacity: 0.5; }
+.badge-card.earned { border: 2px solid var(--sun); }
+
+/* ---------- Badge toast ---------- */
+.badge-toast {
+  position: fixed;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ink);
+  color: white;
+  padding: 14px 22px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-body);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  transition: bottom 0.35s ease;
+  z-index: 999;
+}
+.badge-toast.show { bottom: 30px; }
+.badge-toast-icon { font-size: 1.8rem; }
