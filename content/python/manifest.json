@@ -21,6 +21,16 @@
           "path": "./content/python/module-01/lesson-03.json"
         }
       ]
-    }
+    },
+    { "id": "module-02", "title": "Module 2 · Variables & Data Types", "lessons": [
+  {"id":"lesson-04","title":"Strings","path":"content/python/module-02/lesson-04.json"},
+  {"id":"lesson-05","title":"Numbers and Math","path":"content/python/module-02/lesson-05.json"},
+  {"id":"lesson-06","title":"True or False","path":"content/python/module-02/lesson-06.json"}
+]},
+{ "id": "module-03", "title": "Module 3 · Control Flow", "lessons": [
+  {"id":"lesson-07","title":"Making Decisions","path":"content/python/module-03/lesson-07.json"},
+  {"id":"lesson-08","title":"Comparing Things","path":"content/python/module-03/lesson-08.json"},
+  {"id":"lesson-09","title":"Repeat With a Loop","path":"content/python/module-03/lesson-09.json"}
+]}
   ]
 }
