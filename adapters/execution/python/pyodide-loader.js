@@ -25,10 +25,22 @@ export const PyodideLoader = {
     if (readyPromise) return readyPromise;
 
     readyPromise = (async () => {
-      await loadScript(`${PYODIDE_CDN_BASE}/pyodide.js`);
-      // eslint-disable-next-line no-undef
-      const pyodide = await loadPyodide({ indexURL: `${PYODIDE_CDN_BASE}/` });
-      return pyodide;
+      // 1. Temporarily hide the AMD module loader to prevent collisions
+      const tempDefine = window.define;
+      window.define = undefined;
+
+      try {
+        // 2. Load the script cleanly into the global window space
+        await loadScript(`${PYODIDE_CDN_BASE}/pyodide.js`);
+        
+        // 3. Initialize Pyodide with your CDN path configuration
+        // eslint-disable-next-line no-undef
+        const pyodide = await loadPyodide({ indexURL: `${PYODIDE_CDN_BASE}/` });
+        return pyodide;
+      } finally {
+        // 4. Always restore the AMD loader so your other application tools work
+        window.define = tempDefine;
+      }
     })();
 
     return readyPromise;
