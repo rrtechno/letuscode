@@ -8,17 +8,17 @@
         {
           "id": "lesson-01",
           "title": "Say Hello",
-          "path": "/content/python/module-01/lesson-01.json"
+          "path": "./content/python/module-01/lesson-01.json"
         },
         {
           "id": "lesson-02",
           "title": "Talk to the Computer",
-          "path": "/content/python/module-01/lesson-02.json"
+          "path": "./content/python/module-01/lesson-02.json"
         },
         {
           "id": "lesson-03",
           "title": "Variables",
-          "path": "/content/python/module-01/lesson-03.json"
+          "path": "./content/python/module-01/lesson-03.json"
         }
       ]
     }
