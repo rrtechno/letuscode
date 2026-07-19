@@ -1,0 +1,52 @@
+.luc-achievements {
+  max-width: var(--luc-max-content-width);
+  margin: 0 auto;
+  padding: var(--luc-space-7) var(--luc-space-5);
+}
+
+.luc-achievements__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--luc-space-4);
+  margin-top: var(--luc-space-5);
+}
+
+.luc-achievement-card {
+  background: var(--luc-color-surface);
+  border: 1px solid var(--luc-color-border);
+  border-radius: var(--luc-radius-lg);
+  padding: var(--luc-space-5);
+  text-align: center;
+}
+
+.luc-achievement-card.is-locked {
+  opacity: 0.5;
+  filter: grayscale(0.6);
+}
+
+.luc-achievement-card__icon {
+  font-size: var(--luc-text-3xl);
+  display: block;
+  margin-bottom: var(--luc-space-2);
+}
+
+.luc-achievement-card__title {
+  font-size: var(--luc-text-base);
+  margin: 0 0 var(--luc-space-1);
+}
+
+.luc-achievement-card__desc {
+  font-size: var(--luc-text-sm);
+  color: var(--luc-color-ink-soft);
+  margin: 0 0 var(--luc-space-3);
+}
+
+.luc-achievement-card__status {
+  font-family: var(--luc-font-mono);
+  font-size: var(--luc-text-xs);
+  color: var(--luc-color-primary);
+}
+
+.luc-achievement-card.is-locked .luc-achievement-card__status {
+  color: var(--luc-color-ink-faint);
+}
