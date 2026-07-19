@@ -1,0 +1,59 @@
+.luc-toast-host {
+  position: fixed;
+  top: var(--luc-space-4);
+  right: var(--luc-space-4);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  gap: var(--luc-space-2);
+}
+
+.luc-toast {
+  display: flex;
+  align-items: center;
+  gap: var(--luc-space-3);
+  background: var(--luc-color-surface);
+  border-radius: var(--luc-radius-md);
+  box-shadow: var(--luc-shadow-lg);
+  padding: var(--luc-space-3) var(--luc-space-4);
+  min-width: 280px;
+  max-width: 340px;
+  border-left: 4px solid var(--luc-color-accent);
+  transform: translateX(120%);
+  opacity: 0;
+  transition: transform var(--luc-motion-base) var(--luc-ease), opacity var(--luc-motion-base) var(--luc-ease);
+}
+
+.luc-toast.is-visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.luc-toast__icon {
+  font-size: var(--luc-text-2xl);
+}
+
+.luc-toast__title {
+  font-weight: var(--luc-weight-bold);
+  font-size: var(--luc-text-sm);
+}
+
+.luc-toast__desc {
+  font-size: var(--luc-text-xs);
+  color: var(--luc-color-ink-soft);
+}
+
+.luc-toast__dismiss {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: var(--luc-color-ink-faint);
+  align-self: flex-start;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .luc-toast {
+    transition: opacity var(--luc-motion-base) linear;
+    transform: none;
+  }
+}
