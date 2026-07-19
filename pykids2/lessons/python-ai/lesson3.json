@@ -1,0 +1,40 @@
+{
+  "id": "lesson3",
+  "track": "python-ai",
+  "title": "Pattern Matching & Chatbots",
+  "blocks": [
+    {
+      "type": "concept",
+      "html": "Chatbots &mdash; even simple ones &mdash; work by looking for <strong>keywords</strong> in what you type and picking a matching response."
+    },
+    {
+      "type": "code",
+      "id": "code1",
+      "starter": "def chatbot_reply(message):\n    message = message.lower()\n    if \"hello\" in message or \"hi\" in message:\n        return \"Hey there! 👋\"\n    elif \"your name\" in message:\n        return \"I'm PyBot, nice to meet you!\"\n    elif \"bye\" in message:\n        return \"See you later! 👋\"\n    else:\n        return \"Hmm, I don't understand that yet.\"\n\nprint(chatbot_reply(\"Hello there\"))\nprint(chatbot_reply(\"What is your name?\"))\nprint(chatbot_reply(\"bye bye\"))",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "concept",
+      "html": "Since we can't type live into this page, let's simulate a conversation by looping over a list of messages, like a script."
+    },
+    {
+      "type": "code",
+      "id": "code2",
+      "starter": "def chatbot_reply(message):\n    message = message.lower()\n    if \"hello\" in message or \"hi\" in message:\n        return \"Hey there! 👋\"\n    elif \"joke\" in message:\n        return \"Why don't robots get tired? They recharge! 🤖\"\n    elif \"bye\" in message:\n        return \"See you later! 👋\"\n    else:\n        return \"Hmm, I don't understand that yet.\"\n\nconversation = [\"Hi!\", \"Tell me a joke\", \"bye\"]\n\nfor msg in conversation:\n    print(\"You:\", msg)\n    print(\"PyBot:\", chatbot_reply(msg))\n    print(\"\")",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "challenge",
+      "html": "Add two new keyword rules to <code>chatbot_reply()</code> &mdash; maybe one for &quot;weather&quot; and one for &quot;favorite color&quot;. Test them by adding messages to the <code>conversation</code> list."
+    },
+    {
+      "type": "code",
+      "id": "code3",
+      "starter": "# extend chatbot_reply() with new rules and test them here\n",
+      "runnable": true,
+      "label": "Run Code"
+    }
+  ]
+}

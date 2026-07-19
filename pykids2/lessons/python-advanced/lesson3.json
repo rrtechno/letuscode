@@ -1,0 +1,40 @@
+{
+  "id": "lesson3",
+  "track": "python-advanced",
+  "title": "Classes & Objects",
+  "blocks": [
+    {
+      "type": "concept",
+      "html": "A <strong>class</strong> is a blueprint for creating objects. It bundles data (attributes) and behavior (methods) together. <code>__init__</code> runs automatically when a new object is created."
+    },
+    {
+      "type": "code",
+      "id": "code1",
+      "starter": "class Dog:\n    def __init__(self, name):\n        self.name = name\n\n    def bark(self):\n        print(self.name, \"says Woof!\")\n\nmy_dog = Dog(\"Rex\")\nmy_dog.bark()",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "concept",
+      "html": "Each object made from a class keeps its own separate data. Making two dogs doesn't mix up their names."
+    },
+    {
+      "type": "code",
+      "id": "code2",
+      "starter": "class Dog:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n\n    def bark(self):\n        print(self.name, \"says Woof! I am\", self.age, \"years old.\")\n\ndog1 = Dog(\"Rex\", 3)\ndog2 = Dog(\"Bella\", 5)\ndog1.bark()\ndog2.bark()",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "challenge",
+      "html": "Create your own class called <code>Robot</code> with a <code>name</code> attribute and a <code>greet()</code> method that prints something friendly. Then make two different robots and call <code>greet()</code> on each."
+    },
+    {
+      "type": "code",
+      "id": "code3",
+      "starter": "# define your Robot class here\n",
+      "runnable": true,
+      "label": "Run Code"
+    }
+  ]
+}

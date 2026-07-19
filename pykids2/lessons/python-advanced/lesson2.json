@@ -1,0 +1,40 @@
+{
+  "id": "lesson2",
+  "track": "python-advanced",
+  "title": "Working with Files",
+  "blocks": [
+    {
+      "type": "concept",
+      "html": "Python can save information to a <strong>file</strong> so it isn't lost when the program stops. In this browser, files live in a temporary in-memory disk that resets when you reload the page &mdash; perfect for practicing safely."
+    },
+    {
+      "type": "code",
+      "id": "code1",
+      "starter": "with open(\"myfile.txt\", \"w\") as f:\n    f.write(\"Hello, file!\")\n\nwith open(\"myfile.txt\", \"r\") as f:\n    content = f.read()\n\nprint(\"File said:\", content)",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "concept",
+      "html": "You can write several lines, then read them back one at a time with <code>readlines()</code>."
+    },
+    {
+      "type": "code",
+      "id": "code2",
+      "starter": "lines = [\"Dogs are great\\n\", \"Cats are great too\\n\", \"So are hamsters\\n\"]\n\nwith open(\"animals.txt\", \"w\") as f:\n    f.writelines(lines)\n\nwith open(\"animals.txt\", \"r\") as f:\n    for line in f.readlines():\n        print(\"Line:\", line.strip())",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "challenge",
+      "html": "Write your own list of 3 favorite foods to a file called <code>foods.txt</code>, one per line. Then open it again and print each one back out."
+    },
+    {
+      "type": "code",
+      "id": "code3",
+      "starter": "# write and read foods.txt here\n",
+      "runnable": true,
+      "label": "Run Code"
+    }
+  ]
+}

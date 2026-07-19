@@ -1,0 +1,33 @@
+{
+  "id": "lesson4",
+  "track": "python-advanced",
+  "title": "Capstone: Mini Library",
+  "blocks": [
+    {
+      "type": "concept",
+      "html": "Time for a bigger project! We'll combine <strong>classes</strong>, <strong>error handling</strong>, and <strong>lists</strong> to build a tiny library system that tracks books."
+    },
+    {
+      "type": "code",
+      "id": "code1",
+      "starter": "class Book:\n    def __init__(self, title, author):\n        self.title = title\n        self.author = author\n        self.checked_out = False\n\n    def checkout(self):\n        if self.checked_out:\n            print(self.title, \"is already checked out!\")\n        else:\n            self.checked_out = True\n            print(\"You checked out:\", self.title)\n\n    def return_book(self):\n        self.checked_out = False\n        print(\"Thanks for returning\", self.title)\n\n\nlibrary = [\n    Book(\"Charlotte's Web\", \"E.B. White\"),\n    Book(\"Matilda\", \"Roald Dahl\"),\n    Book(\"Holes\", \"Louis Sachar\")\n]\n\ndef find_book(title):\n    for book in library:\n        if book.title == title:\n            return book\n    return None\n\ntry:\n    chosen = \"Matilda\"\n    book = find_book(chosen)\n    if book is None:\n        raise ValueError(\"That book isn't in the library!\")\n    book.checkout()\n    book.checkout()   # try checking it out twice on purpose\nexcept ValueError as e:\n    print(\"Error:\", e)",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "challenge",
+      "html": "Add a new <code>Book</code> to the <code>library</code> list with your favorite title and author. Then look it up with <code>find_book()</code> and check it out."
+    },
+    {
+      "type": "code",
+      "id": "code2",
+      "starter": "# add your own book and check it out here\n",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "concept",
+      "html": "🎉 <strong>Amazing work!</strong> You've now used classes, files, and error handling together in a real program &mdash; the same building blocks used in professional software!"
+    }
+  ]
+}

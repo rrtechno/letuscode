@@ -1,0 +1,40 @@
+{
+  "id": "lesson5",
+  "track": "python-basics",
+  "title": "Functions",
+  "blocks": [
+    {
+      "type": "concept",
+      "html": "A <strong>function</strong> is a reusable block of code. You define it once with <code>def</code>, then call it as many times as you want."
+    },
+    {
+      "type": "code",
+      "id": "code1",
+      "starter": "def greet():\n    print(\"Hello there, coder!\")\n\ngreet()\ngreet()\ngreet()",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "concept",
+      "html": "Functions can take <strong>parameters</strong> &mdash; inputs that change what they do &mdash; and can <code>return</code> a result."
+    },
+    {
+      "type": "code",
+      "id": "code2",
+      "starter": "def add(a, b):\n    return a + b\n\nresult = add(4, 7)\nprint(\"4 + 7 =\", result)\n\ndef greet_person(name):\n    print(\"Hey\", name, \"welcome to Python!\")\n\ngreet_person(\"Sam\")\ngreet_person(\"Priya\")",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "challenge",
+      "html": "Write a function called <code>double(n)</code> that returns <code>n * 2</code>. Call it with a few different numbers and print each result."
+    },
+    {
+      "type": "code",
+      "id": "code3",
+      "starter": "# define double(n) here\n",
+      "runnable": true,
+      "label": "Run Code"
+    }
+  ]
+}

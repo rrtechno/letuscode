@@ -1,0 +1,14 @@
+{
+  "id": "python-basics",
+  "title": "Python Basics",
+  "description": "The foundations every Python coder needs.",
+  "engine": "pyodide",
+  "lessons": [
+    { "id": "lesson1", "title": "Say Hello to Python",  "file": "lessons/python-basics/lesson1.json", "summary": "print(), variables, and your first program" },
+    { "id": "lesson2", "title": "Making Choices",        "file": "lessons/python-basics/lesson2.json", "summary": "if / elif / else" },
+    { "id": "lesson3", "title": "Loops & Patterns",       "file": "lessons/python-basics/lesson3.json", "summary": "for, while — repeat without repeating yourself" },
+    { "id": "lesson4", "title": "Lists & Dictionaries",   "file": "lessons/python-basics/lesson4.json", "summary": "Organize lots of data" },
+    { "id": "lesson5", "title": "Functions",              "file": "lessons/python-basics/lesson5.json", "summary": "Build your own reusable tools" },
+    { "id": "lesson6", "title": "Mini Projects",          "file": "lessons/python-basics/lesson6.json", "summary": "Quiz game — combine everything" }
+  ]
+}

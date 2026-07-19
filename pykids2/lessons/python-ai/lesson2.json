@@ -1,0 +1,40 @@
+{
+  "id": "lesson2",
+  "track": "python-ai",
+  "title": "Teaching a Computer to Decide",
+  "blocks": [
+    {
+      "type": "concept",
+      "html": "A <strong>classifier</strong> is a program that sorts things into categories. Real AI classifiers learn their rules from examples &mdash; we'll build one by hand first to see how the idea works."
+    },
+    {
+      "type": "code",
+      "id": "code1",
+      "starter": "def classify_animal(legs, has_fur):\n    if legs == 8:\n        return \"Spider\"\n    elif legs == 4 and has_fur:\n        return \"Mammal (like a dog!)\"\n    elif legs == 2 and not has_fur:\n        return \"Bird\"\n    else:\n        return \"Not sure — need more clues!\"\n\nprint(classify_animal(8, False))\nprint(classify_animal(4, True))\nprint(classify_animal(2, False))",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "concept",
+      "html": "Real AI systems often work by comparing a new example to lots of <strong>training examples</strong> and picking the closest match. Here's a tiny version using a lookup list."
+    },
+    {
+      "type": "code",
+      "id": "code2",
+      "starter": "training_data = [\n    {\"weight\": 150, \"fruit\": \"watermelon\"},\n    {\"weight\": 5,   \"fruit\": \"apple\"},\n    {\"weight\": 1,   \"fruit\": \"grape\"},\n]\n\ndef guess_fruit(weight):\n    closest = training_data[0]\n    smallest_diff = abs(weight - closest[\"weight\"])\n    for item in training_data:\n        diff = abs(weight - item[\"weight\"])\n        if diff < smallest_diff:\n            smallest_diff = diff\n            closest = item\n    return closest[\"fruit\"]\n\nprint(\"A 4g fruit is probably a:\", guess_fruit(4))\nprint(\"A 140g fruit is probably a:\", guess_fruit(140))",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "challenge",
+      "html": "Add a fourth item to <code>training_data</code> for &quot;orange&quot; (around 130g). Then test <code>guess_fruit()</code> with a weight close to it and see if it picks correctly."
+    },
+    {
+      "type": "code",
+      "id": "code3",
+      "starter": "# add orange to training_data and test guess_fruit() here\n",
+      "runnable": true,
+      "label": "Run Code"
+    }
+  ]
+}

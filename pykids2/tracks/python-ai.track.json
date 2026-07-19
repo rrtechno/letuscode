@@ -1,0 +1,12 @@
+{
+  "id": "python-ai",
+  "title": "AI for Kids",
+  "description": "How computers make decisions, spot patterns, and hold a conversation.",
+  "engine": "pyodide",
+  "lessons": [
+    { "id": "lesson1", "title": "What Is AI, Really?",       "file": "lessons/python-ai/lesson1.json", "summary": "Rules, decisions, and what \"smart\" code means" },
+    { "id": "lesson2", "title": "Teaching a Computer to Decide", "file": "lessons/python-ai/lesson2.json", "summary": "Build a simple decision-making classifier" },
+    { "id": "lesson3", "title": "Pattern Matching & Chatbots",  "file": "lessons/python-ai/lesson3.json", "summary": "How chatbots recognize what you're asking" },
+    { "id": "lesson4", "title": "Capstone: Build Your Chatbot", "file": "lessons/python-ai/lesson4.json", "summary": "Combine everything into your own mini chatbot" }
+  ]
+}

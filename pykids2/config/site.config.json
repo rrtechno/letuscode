@@ -1,0 +1,43 @@
+{
+  "site_name": "PyKids",
+  "tagline": "Learn to code, step by step!",
+  "tracks": [
+    {
+      "id": "python-basics",
+      "title": "Python Basics",
+      "description": "Start here — print, variables, loops, functions and your first mini project.",
+      "icon": "🐍",
+      "color": "sky",
+      "file": "tracks/python-basics.track.json",
+      "status": "active"
+    },
+    {
+      "id": "python-advanced",
+      "title": "Advanced Python",
+      "description": "Handle errors gracefully, work with files, and build your own classes.",
+      "icon": "🚀",
+      "color": "sun",
+      "file": "tracks/python-advanced.track.json",
+      "status": "active"
+    },
+    {
+      "id": "python-streamlit",
+      "title": "Build Apps with Streamlit",
+      "description": "Turn your Python skills into interactive apps and dashboards.",
+      "icon": "📊",
+      "color": "coral",
+      "file": "tracks/python-streamlit.track.json",
+      "status": "coming-soon"
+    },
+    {
+      "id": "python-ai",
+      "title": "AI for Kids",
+      "description": "Teach a computer to make decisions, spot patterns, and chat back.",
+      "icon": "🤖",
+      "color": "leaf",
+      "file": "tracks/python-ai.track.json",
+      "status": "active"
+    }
+  ]
+}
+

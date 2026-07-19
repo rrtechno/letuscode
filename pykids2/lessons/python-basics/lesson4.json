@@ -1,0 +1,40 @@
+{
+  "id": "lesson4",
+  "track": "python-basics",
+  "title": "Lists & Dictionaries",
+  "blocks": [
+    {
+      "type": "concept",
+      "html": "A <strong>list</strong> holds many items in order, inside square brackets <code>[ ]</code>. Each item has a position, starting at 0."
+    },
+    {
+      "type": "code",
+      "id": "code1",
+      "starter": "pets = [\"dog\", \"cat\", \"hamster\"]\nprint(pets[0])\nprint(pets[2])\npets.append(\"fish\")\nprint(pets)",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "concept",
+      "html": "A <strong>dictionary</strong> stores information as pairs: a &quot;key&quot; and its &quot;value&quot;, inside curly brackets <code>{ }</code>."
+    },
+    {
+      "type": "code",
+      "id": "code2",
+      "starter": "student = {\n    \"name\": \"Maya\",\n    \"age\": 10,\n    \"favorite_subject\": \"Science\"\n}\nprint(student[\"name\"], \"is\", student[\"age\"], \"years old\")\nprint(\"They love\", student[\"favorite_subject\"])",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "challenge",
+      "html": "Make a list called <code>toys</code> with 3 of your favorite toys. Then loop over it with a <code>for</code> loop and print &quot;I love my [toy]!&quot; for each one."
+    },
+    {
+      "type": "code",
+      "id": "code3",
+      "starter": "# build your toy list and loop here\n",
+      "runnable": true,
+      "label": "Run Code"
+    }
+  ]
+}

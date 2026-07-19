@@ -1,0 +1,51 @@
+{
+  "id": "lesson3",
+  "track": "python-basics",
+  "title": "Loops & Patterns",
+  "blocks": [
+    {
+      "type": "concept",
+      "html": "A <code>for</code> loop repeats code a set number of times. <code>range(5)</code> means &quot;count 0, 1, 2, 3, 4&quot;."
+    },
+    {
+      "type": "code",
+      "id": "code1",
+      "starter": "for i in range(5):\n    print(\"Count:\", i)",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "concept",
+      "html": "You can loop through a list of items directly, printing something for each one."
+    },
+    {
+      "type": "code",
+      "id": "code2",
+      "starter": "fruits = [\"apple\", \"banana\", \"mango\"]\nfor fruit in fruits:\n    print(\"I like\", fruit)",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "concept",
+      "html": "A <code>while</code> loop keeps going as long as something stays true. Be careful — always change something inside so it can stop!"
+    },
+    {
+      "type": "code",
+      "id": "code3",
+      "starter": "countdown = 3\nwhile countdown > 0:\n    print(countdown)\n    countdown = countdown - 1\nprint(\"Blast off! 🚀\")",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "challenge",
+      "html": "Use a <code>for</code> loop and <code>range()</code> to print a star pattern: print one more &quot;*&quot; on each line, for 5 lines. Hint: try <code>print(\"*\" * i)</code>."
+    },
+    {
+      "type": "code",
+      "id": "code4",
+      "starter": "# build your star pattern here\n",
+      "runnable": true,
+      "label": "Run Code"
+    }
+  ]
+}

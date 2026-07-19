@@ -1,0 +1,33 @@
+{
+  "id": "lesson4",
+  "track": "python-ai",
+  "title": "Capstone: Build Your Chatbot",
+  "blocks": [
+    {
+      "type": "concept",
+      "html": "Let's combine everything: keyword matching, decision rules, and a bit of personality, into one chatbot project you can keep improving."
+    },
+    {
+      "type": "code",
+      "id": "code1",
+      "starter": "class ChatBot:\n    def __init__(self, name):\n        self.name = name\n        self.rules = {\n            \"hello\": \"Hey! I'm \" + name + \", your friendly bot.\",\n            \"how are you\": \"I'm running at 100% — thanks for asking!\",\n            \"help\": \"I can chat about jokes, weather, or just say hi!\",\n            \"joke\": \"Why did the computer go to the doctor? It had a virus! 🤖\",\n            \"bye\": \"Goodbye! Come back and chat anytime.\"\n        }\n\n    def reply(self, message):\n        message = message.lower()\n        for keyword, response in self.rules.items():\n            if keyword in message:\n                return response\n        return \"I'm still learning — I don't know that one yet!\"\n\n\nbot = ChatBot(\"PyBot\")\nconversation = [\"Hello!\", \"how are you?\", \"tell me a joke\", \"bye\"]\n\nfor msg in conversation:\n    print(\"You:\", msg)\n    print(bot.name + \":\", bot.reply(msg))\n    print(\"\")",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "challenge",
+      "html": "Give your bot a new name, and add at least 2 new keyword rules to its <code>self.rules</code> dictionary (like a favorite hobby or a fun fact). Then test them with your own <code>conversation</code> list."
+    },
+    {
+      "type": "code",
+      "id": "code2",
+      "starter": "# customize your ChatBot here\n",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "concept",
+      "html": "🎉 <strong>Congratulations!</strong> You've built a rule-based chatbot from scratch &mdash; the same core idea (matching patterns to responses) that powered the very first chatbots ever made. Real AI today uses much bigger pattern libraries learned from data, but you now understand the foundation!"
+    }
+  ]
+}

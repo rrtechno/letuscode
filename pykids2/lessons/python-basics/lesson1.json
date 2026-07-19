@@ -1,0 +1,37 @@
+{
+  "id": "lesson1",
+  "track": "python-basics",
+  "title": "Say Hello to Python",
+  "blocks": [
+    {
+      "type": "concept",
+      "html": "Python is a language for talking to computers. The <code>print()</code> command tells the computer to show words on the screen."
+    },
+    {
+      "type": "concept",
+      "html": "Try it below &mdash; click <strong>Run Code</strong> and watch what happens!"
+    },
+    {
+      "type": "code",
+      "id": "code1",
+      "starter": "print(\"Hello, World!\")",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "concept",
+      "html": "<strong>Variables</strong> are boxes that store information. Here we make a box called <code>name</code> and put your name in it."
+    },
+    {
+      "type": "code",
+      "id": "code2",
+      "starter": "name = \"Alex\"\nage = 10\nprint(\"My name is\", name)\nprint(\"I am\", age, \"years old\")",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "challenge",
+      "html": "Change the code above so it prints <strong>your own</strong> name and age instead of Alex's. Then add one more line that prints your favorite color!"
+    }
+  ]
+}

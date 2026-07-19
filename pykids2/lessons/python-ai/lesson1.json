@@ -1,0 +1,37 @@
+{
+  "id": "lesson1",
+  "track": "python-ai",
+  "title": "What Is AI, Really?",
+  "blocks": [
+    {
+      "type": "concept",
+      "html": "&quot;AI&quot; sounds mysterious, but at its heart, most AI programs just follow <strong>rules</strong> to make decisions &mdash; the trick is writing rules clever enough to feel smart."
+    },
+    {
+      "type": "concept",
+      "html": "Let's build a tiny &quot;smart&quot; program that gives advice based on the weather. This is a real (if simple) form of AI: a <strong>rule-based system</strong>."
+    },
+    {
+      "type": "code",
+      "id": "code1",
+      "starter": "def weather_advice(temperature):\n    if temperature > 30:\n        return \"It's hot! Drink lots of water. 🔥\"\n    elif temperature > 15:\n        return \"Nice day for a walk! 😀\"\n    else:\n        return \"Grab a jacket, it's chilly! 🧥\"\n\nprint(weather_advice(35))\nprint(weather_advice(20))\nprint(weather_advice(5))",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "concept",
+      "html": "More advanced AI (like the assistant you're chatting with right now!) uses patterns learned from huge amounts of data instead of hand-written rules &mdash; but the basic idea is the same: <strong>take an input, make a decision, give an output</strong>."
+    },
+    {
+      "type": "challenge",
+      "html": "Write a function <code>movie_recommendation(age)</code> that returns a different movie genre suggestion depending on the age given (try 3 age ranges with if/elif/else)."
+    },
+    {
+      "type": "code",
+      "id": "code2",
+      "starter": "# define movie_recommendation(age) here\n",
+      "runnable": true,
+      "label": "Run Code"
+    }
+  ]
+}

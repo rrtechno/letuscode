@@ -1,0 +1,44 @@
+{
+  "id": "lesson1",
+  "track": "python-advanced",
+  "title": "Handling Errors",
+  "blocks": [
+    {
+      "type": "concept",
+      "html": "Sometimes code hits a problem &mdash; dividing by zero, a missing file, bad data. Python calls this an <strong>error</strong> (or &quot;exception&quot;). Without help, an error crashes your whole program."
+    },
+    {
+      "type": "code",
+      "id": "code1",
+      "starter": "print(\"Before the error\")\nresult = 10 / 0\nprint(\"This line never runs\")",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "concept",
+      "html": "<code>try</code> / <code>except</code> lets you catch an error and handle it gracefully instead of crashing."
+    },
+    {
+      "type": "code",
+      "id": "code2",
+      "starter": "try:\n    result = 10 / 0\n    print(\"Result:\", result)\nexcept ZeroDivisionError:\n    print(\"Oops — you can't divide by zero!\")\n\nprint(\"The program keeps going 😀\")",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "concept",
+      "html": "Different mistakes raise different error types. <code>ValueError</code> happens when you convert text that isn't a valid number."
+    },
+    {
+      "type": "code",
+      "id": "code3",
+      "starter": "text = \"banana\"\ntry:\n    number = int(text)\n    print(\"It worked:\", number)\nexcept ValueError:\n    print(text, \"is not a number!\")",
+      "runnable": true,
+      "label": "Run Code"
+    },
+    {
+      "type": "challenge",
+      "html": "Write a <code>try/except</code> block that attempts <code>int(\"abc\")</code> and catches the <code>ValueError</code>, printing a friendly message instead of crashing."
+    }
+  ]
+}

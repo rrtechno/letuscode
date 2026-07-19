@@ -1,0 +1,12 @@
+{
+  "id": "python-advanced",
+  "title": "Advanced Python",
+  "description": "Level up: catch errors gracefully, save data to files, and build your own classes.",
+  "engine": "pyodide",
+  "lessons": [
+    { "id": "lesson1", "title": "Handling Errors",   "file": "lessons/python-advanced/lesson1.json", "summary": "try / except — don't let errors crash your program" },
+    { "id": "lesson2", "title": "Working with Files", "file": "lessons/python-advanced/lesson2.json", "summary": "Save and load data with open(), read(), write()" },
+    { "id": "lesson3", "title": "Classes & Objects",  "file": "lessons/python-advanced/lesson3.json", "summary": "Build your own blueprints for objects" },
+    { "id": "lesson4", "title": "Capstone: Mini Library", "file": "lessons/python-advanced/lesson4.json", "summary": "Combine classes, files, and error handling into one project" }
+  ]
+}
