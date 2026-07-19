@@ -27,8 +27,8 @@ export const ConfigService = {
 
     loadPromise = (async () => {
       const [app, tracks] = await Promise.all([
-        fetchJson('./config/app.config.json'),
-        fetchJson('./config/tracks.json')
+        fetchJson('./letuscode/config/app.config.json'),
+        fetchJson('./letuscode/config/tracks.json')
       ]);
       appConfig = app;
       tracksConfig = tracks;
