@@ -1,6 +1,6 @@
 import { ContentAdapterInterface } from '../_interface/content-adapter.interface.js';
 
-const MANIFEST_URL = '/content/python/manifest.json';
+const MANIFEST_URL = './content/python/manifest.json';
 
 /**
  * PythonContentAdapter
