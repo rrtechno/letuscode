@@ -3,6 +3,7 @@ import { TrackSelectorPage } from '../../components/track-selector/track-selecto
 import { TrackEntryController, LessonPageController } from '../lesson/lesson-page-controller.js';
 import { ProgressDashboardPage } from '../../components/progress-dashboard/progress-dashboard.js';
 import { createEl } from '../utils/dom-utils.js';
+import { AchievementsGalleryPage } from '../../components/achievements-gallery/achievements-gallery.js';
 
 const NotFoundController = {
   mount(container) {
@@ -30,5 +31,6 @@ export function registerRoutes() {
   Router.register('/progress', ProgressDashboardPage);
   Router.register('/track/:trackId', TrackEntryController);
   Router.register('/track/:trackId/lesson/:lessonId', LessonPageController);
-  Router.registerNotFound(NotFoundController);
+  Router.register('/achievements', AchievementsGalleryPage);
+  Router.registerNotFound(NotFoundController)
 }
