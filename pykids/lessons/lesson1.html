@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 1 — Say Hello to Python | PyKids</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
+<script src="../assets/js/runner.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="snake">🐍</span>
+  <span class="logo">PyKids</span>
+</div>
+
+<div class="lesson-wrap">
+  <div class="lesson-header">
+    <div class="eyebrow">Level 1</div>
+    <h1>Say Hello to Python</h1>
+  </div>
+
+  <div class="concept-box">
+    <p>Python is a language for talking to computers. The <code>print()</code> command tells the computer to show words on the screen.</p>
+    <p>Try it below — click <strong>Run Code</strong> and watch what happens!</p>
+  </div>
+
+  <div class="editor-box">
+    <textarea id="code1" spellcheck="false">print("Hello, World!")</textarea>
+  </div>
+  <div class="run-row">
+    <button class="btn-run" id="btn1" onclick="runKidCode('code1','out1','status1','btn1')">▶ Run Code</button>
+    <span class="status" id="status1"></span>
+  </div>
+  <div class="output-box" id="out1">Your output will show up here…</div>
+
+  <div class="concept-box">
+    <p><strong>Variables</strong> are boxes that store information. Here we make a box called <code>name</code> and put your name in it.</p>
+  </div>
+
+  <div class="editor-box">
+    <textarea id="code2" spellcheck="false">name = "Alex"
+age = 10
+print("My name is", name)
+print("I am", age, "years old")</textarea>
+  </div>
+  <div class="run-row">
+    <button class="btn-run" id="btn2" onclick="runKidCode('code2','out2','status2','btn2')">▶ Run Code</button>
+    <span class="status" id="status2"></span>
+  </div>
+  <div class="output-box" id="out2">Your output will show up here…</div>
+
+  <div class="challenge-box">
+    <h3>🌟 Your Challenge</h3>
+    <p>Change the code above so it prints <strong>your own</strong> name and age instead of Alex's. Then add one more line that prints your favorite color!</p>
+  </div>
+
+  <div class="nav-row">
+    <a href="../index.html">← Back to Map</a>
+    <a href="#">Level 2 (coming soon) →</a>
+  </div>
+</div>
+
+</body>
+</html>

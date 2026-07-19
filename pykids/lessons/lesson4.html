@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 4 — Lists &amp; Dictionaries | PyKids</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
+<script src="../assets/js/runner.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="snake">🐍</span>
+  <span class="logo">PyKids</span>
+</div>
+
+<div class="lesson-wrap">
+  <div class="lesson-header">
+    <div class="eyebrow">Level 4</div>
+    <h1>Lists &amp; Dictionaries</h1>
+  </div>
+
+  <div class="concept-box">
+    <p>A <strong>list</strong> holds many items in order, inside square brackets <code>[ ]</code>. Each item has a position, starting at 0.</p>
+  </div>
+
+  <div class="editor-box">
+    <textarea id="code1" spellcheck="false">pets = ["dog", "cat", "hamster"]
+print(pets[0])
+print(pets[2])
+pets.append("fish")
+print(pets)</textarea>
+  </div>
+  <div class="run-row">
+    <button class="btn-run" id="btn1" onclick="runKidCode('code1','out1','status1','btn1')">▶ Run Code</button>
+    <span class="status" id="status1"></span>
+  </div>
+  <div class="output-box" id="out1">Your output will show up here…</div>
+
+  <div class="concept-box">
+    <p>A <strong>dictionary</strong> stores information as pairs: a "key" and its "value", inside curly brackets <code>{ }</code>.</p>
+  </div>
+
+  <div class="editor-box">
+    <textarea id="code2" spellcheck="false">student = {
+    "name": "Maya",
+    "age": 10,
+    "favorite_subject": "Science"
+}
+print(student["name"], "is", student["age"], "years old")
+print("They love", student["favorite_subject"])</textarea>
+  </div>
+  <div class="run-row">
+    <button class="btn-run" id="btn2" onclick="runKidCode('code2','out2','status2','btn2')">▶ Run Code</button>
+    <span class="status" id="status2"></span>
+  </div>
+  <div class="output-box" id="out2">Your output will show up here…</div>
+
+  <div class="challenge-box">
+    <h3>🌟 Your Challenge</h3>
+    <p>Make a list called <code>toys</code> with 3 of your favorite toys. Then loop over it with a <code>for</code> loop and print "I love my [toy]!" for each one.</p>
+  </div>
+
+  <div class="editor-box">
+    <textarea id="code3" spellcheck="false"># build your toy list and loop here
+</textarea>
+  </div>
+  <div class="run-row">
+    <button class="btn-run" id="btn3" onclick="runKidCode('code3','out3','status3','btn3')">▶ Run Code</button>
+    <span class="status" id="status3"></span>
+  </div>
+  <div class="output-box" id="out3">Your output will show up here…</div>
+
+  <div class="nav-row">
+    <a href="lesson3.html">← Level 3</a>
+    <a href="lesson5.html">Level 5 →</a>
+  </div>
+</div>
+
+</body>
+</html>

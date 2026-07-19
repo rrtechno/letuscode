@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 2 — Making Choices | PyKids</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
+<script src="../assets/js/runner.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="snake">🐍</span>
+  <span class="logo">PyKids</span>
+</div>
+
+<div class="lesson-wrap">
+  <div class="lesson-header">
+    <div class="eyebrow">Level 2</div>
+    <h1>Making Choices</h1>
+  </div>
+
+  <div class="concept-box">
+    <p>Programs get to make decisions using <code>if</code>. If something is true, Python runs the indented code below it.</p>
+  </div>
+
+  <div class="editor-box">
+    <textarea id="code1" spellcheck="false">age = 10
+if age >= 10:
+    print("You can join the big kids club!")</textarea>
+  </div>
+  <div class="run-row">
+    <button class="btn-run" id="btn1" onclick="runKidCode('code1','out1','status1','btn1')">▶ Run Code</button>
+    <span class="status" id="status1"></span>
+  </div>
+  <div class="output-box" id="out1">Your output will show up here…</div>
+
+  <div class="concept-box">
+    <p>Use <code>else</code> for "otherwise", and <code>elif</code> ("else if") to check more options in order.</p>
+  </div>
+
+  <div class="editor-box">
+    <textarea id="code2" spellcheck="false">weather = "rainy"
+
+if weather == "sunny":
+    print("Wear sunglasses! 😎")
+elif weather == "rainy":
+    print("Grab an umbrella! ☔")
+else:
+    print("Not sure — check outside!")</textarea>
+  </div>
+  <div class="run-row">
+    <button class="btn-run" id="btn2" onclick="runKidCode('code2','out2','status2','btn2')">▶ Run Code</button>
+    <span class="status" id="status2"></span>
+  </div>
+  <div class="output-box" id="out2">Your output will show up here…</div>
+
+  <div class="challenge-box">
+    <h3>🌟 Your Challenge</h3>
+    <p>Write code that stores a number in <code>score</code>. If it's 90 or above, print "A grade!". If it's 70 or above, print "B grade!". Otherwise, print "Keep practicing!".</p>
+  </div>
+
+  <div class="editor-box">
+    <textarea id="code3" spellcheck="false">score = 85
+# your if / elif / else here
+</textarea>
+  </div>
+  <div class="run-row">
+    <button class="btn-run" id="btn3" onclick="runKidCode('code3','out3','status3','btn3')">▶ Run Code</button>
+    <span class="status" id="status3"></span>
+  </div>
+  <div class="output-box" id="out3">Your output will show up here…</div>
+
+  <div class="nav-row">
+    <a href="lesson1.html">← Level 1</a>
+    <a href="lesson3.html">Level 3 →</a>
+  </div>
+</div>
+
+</body>
+</html>

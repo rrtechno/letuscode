@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 3 — Loops &amp; Patterns | PyKids</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
+<script src="../assets/js/runner.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="snake">🐍</span>
+  <span class="logo">PyKids</span>
+</div>
+
+<div class="lesson-wrap">
+  <div class="lesson-header">
+    <div class="eyebrow">Level 3</div>
+    <h1>Loops &amp; Patterns</h1>
+  </div>
+
+  <div class="concept-box">
+    <p>A <code>for</code> loop repeats code a set number of times. <code>range(5)</code> means "count 0, 1, 2, 3, 4".</p>
+  </div>
+
+  <div class="editor-box">
+    <textarea id="code1" spellcheck="false">for i in range(5):
+    print("Count:", i)</textarea>
+  </div>
+  <div class="run-row">
+    <button class="btn-run" id="btn1" onclick="runKidCode('code1','out1','status1','btn1')">▶ Run Code</button>
+    <span class="status" id="status1"></span>
+  </div>
+  <div class="output-box" id="out1">Your output will show up here…</div>
+
+  <div class="concept-box">
+    <p>You can loop through a list of items directly, printing something for each one.</p>
+  </div>
+
+  <div class="editor-box">
+    <textarea id="code2" spellcheck="false">fruits = ["apple", "banana", "mango"]
+for fruit in fruits:
+    print("I like", fruit)</textarea>
+  </div>
+  <div class="run-row">
+    <button class="btn-run" id="btn2" onclick="runKidCode('code2','out2','status2','btn2')">▶ Run Code</button>
+    <span class="status" id="status2"></span>
+  </div>
+  <div class="output-box" id="out2">Your output will show up here…</div>
+
+  <div class="concept-box">
+    <p>A <code>while</code> loop keeps going as long as something stays true. Be careful — always change something inside so it can stop!</p>
+  </div>
+
+  <div class="editor-box">
+    <textarea id="code3" spellcheck="false">countdown = 3
+while countdown > 0:
+    print(countdown)
+    countdown = countdown - 1
+print("Blast off! 🚀")</textarea>
+  </div>
+  <div class="run-row">
+    <button class="btn-run" id="btn3" onclick="runKidCode('code3','out3','status3','btn3')">▶ Run Code</button>
+    <span class="status" id="status3"></span>
+  </div>
+  <div class="output-box" id="out3">Your output will show up here…</div>
+
+  <div class="challenge-box">
+    <h3>🌟 Your Challenge</h3>
+    <p>Use a <code>for</code> loop and <code>range()</code> to print a star pattern: print one more "*" on each line, for 5 lines. Hint: try <code>print("*" * i)</code>.</p>
+  </div>
+
+  <div class="editor-box">
+    <textarea id="code4" spellcheck="false"># build your star pattern here
+</textarea>
+  </div>
+  <div class="run-row">
+    <button class="btn-run" id="btn4" onclick="runKidCode('code4','out4','status4','btn4')">▶ Run Code</button>
+    <span class="status" id="status4"></span>
+  </div>
+  <div class="output-box" id="out4">Your output will show up here…</div>
+
+  <div class="nav-row">
+    <a href="lesson2.html">← Level 2</a>
+    <a href="lesson4.html">Level 4 →</a>
+  </div>
+</div>
+
+</body>
+</html>

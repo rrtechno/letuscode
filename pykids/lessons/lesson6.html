@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson 6 — Mini Projects | PyKids</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
+<script src="../assets/js/runner.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="snake">🐍</span>
+  <span class="logo">PyKids</span>
+</div>
+
+<div class="lesson-wrap">
+  <div class="lesson-header">
+    <div class="eyebrow">Level 6</div>
+    <h1>Mini Projects</h1>
+  </div>
+
+  <div class="concept-box">
+    <p>Time to combine everything you've learned — variables, if/else, loops, lists, and functions — into a real program: a <strong>quiz game</strong>!</p>
+    <p>Since this runs without keyboard input, we'll store the "player's answers" in a list ahead of time. Try running it, then change the answers to see your score change.</p>
+  </div>
+
+  <div class="editor-box">
+    <textarea id="code1" spellcheck="false">questions = [
+    "What color do you get by mixing red and yellow?",
+    "How many legs does a spider have?",
+    "What planet do we live on?"
+]
+correct_answers = ["orange", "8", "earth"]
+player_answers  = ["orange", "8", "mars"]   # try changing these!
+
+def check_answers(questions, correct, given):
+    score = 0
+    for i in range(len(questions)):
+        print(questions[i])
+        if given[i].lower() == correct[i].lower():
+            print("✅ Correct!")
+            score = score + 1
+        else:
+            print("❌ Not quite — the answer was", correct[i])
+        print("")
+    return score
+
+final_score = check_answers(questions, correct_answers, player_answers)
+print("You scored", final_score, "out of", len(questions))</textarea>
+  </div>
+  <div class="run-row">
+    <button class="btn-run" id="btn1" onclick="runKidCode('code1','out1','status1','btn1')">▶ Run Code</button>
+    <span class="status" id="status1"></span>
+  </div>
+  <div class="output-box" id="out1">Your output will show up here…</div>
+
+  <div class="challenge-box">
+    <h3>🌟 Project Challenge</h3>
+    <p>Make it your own! Change the <code>questions</code> and <code>correct_answers</code> to write your own 3-question quiz about your favorite topic (animals, space, games — anything). Then set <code>player_answers</code> and run it.</p>
+  </div>
+
+  <div class="editor-box">
+    <textarea id="code2" spellcheck="false"># write your own quiz here — copy the pattern above
+</textarea>
+  </div>
+  <div class="run-row">
+    <button class="btn-run" id="btn2" onclick="runKidCode('code2','out2','status2','btn2')">▶ Run Code</button>
+    <span class="status" id="status2"></span>
+  </div>
+  <div class="output-box" id="out2">Your output will show up here…</div>
+
+  <div class="concept-box">
+    <p>🎉 <strong>Congratulations!</strong> You've completed the PyKids foundations course. You now know enough Python to build small games, tools, and scripts. Advanced topics (files, classes, error handling) are coming soon!</p>
+  </div>
+
+  <div class="nav-row">
+    <a href="lesson5.html">← Level 5</a>
+    <a href="../index.html">Back to Map 🏁</a>
+  </div>
+</div>
+
+</body>
+</html>
