@@ -1,48 +1,49 @@
 /*
-  Design tokens for Let Us Code.
-
-  Direction: a code-forward, energetic-but-calm palette built around an
-  electric indigo (the "code" color) with a warm amber reserved for
-  celebration moments (streaks, achievements) so it stays meaningful
-  rather than decorative. Type pairs a geometric display face
-  (Space Grotesk) against Inter for body copy and JetBrains Mono for
-  anything code-shaped — including lesson numbering, since this
-  curriculum genuinely is an ordered sequence.
-
-  Every component MUST reference these variables — no raw hex/px values
-  in component CSS.
+  Let Us Code — Design Tokens v2
+  Drop-in replacement for assets/styles/tokens.css. Contains zero file
+  paths, so it's safe to swap in without touching any of your path fixes.
+  Punchier, higher-contrast palette; every component already reads these
+  variables, so this alone lifts the whole app's look.
 */
 
 :root,
 [data-theme='light'] {
   /* ---- Color: surfaces & ink ---- */
-  --luc-color-bg: #faf9f7;
+  --luc-color-bg: #f4f2ff;
   --luc-color-surface: #ffffff;
-  --luc-color-surface-sunken: #f2f1fb;
-  --luc-color-border: #e3e2ee;
-  --luc-color-ink: #1c1f2e;
-  --luc-color-ink-soft: #5b5f73;
-  --luc-color-ink-faint: #9497a8;
+  --luc-color-surface-sunken: #ece9fb;
+  --luc-color-border: #d9d4f5;
+  --luc-color-ink: #171833;
+  --luc-color-ink-soft: #55577a;
+  --luc-color-ink-faint: #8d8fb0;
 
   /* ---- Color: brand ---- */
-  --luc-color-primary: #4c56e8;
-  --luc-color-primary-hover: #3c45d1;
+  --luc-color-primary: #5b3df2;
+  --luc-color-primary-hover: #4a2fd6;
   --luc-color-primary-ink: #ffffff;
-  --luc-color-primary-tint: #eceeff;
+  --luc-color-primary-tint: #ece6ff;
+
+  /* ---- Color: secondary accent (variety — badges, hover glows) ---- */
+  --luc-color-secondary: #ff4fa3;
+  --luc-color-secondary-tint: #ffe6f2;
 
   /* ---- Color: semantic ---- */
-  --luc-color-success: #17a673;
-  --luc-color-success-tint: #e6f7f1;
-  --luc-color-error: #e1483d;
-  --luc-color-error-tint: #fceceb;
+  --luc-color-success: #10b981;
+  --luc-color-success-tint: #dcfbf0;
+  --luc-color-error: #f1483d;
+  --luc-color-error-tint: #ffe6e3;
   --luc-color-accent: #ffb020;
-  --luc-color-accent-tint: #fff5e0;
+  --luc-color-accent-tint: #fff2d6;
 
-  /* ---- Color: console (always dark, regardless of theme) ---- */
-  --luc-color-console-bg: #14162b;
-  --luc-color-console-ink: #e8e9f3;
+  /* ---- Color: console (always dark) ---- */
+  --luc-color-console-bg: #14102b;
+  --luc-color-console-ink: #ece9fb;
   --luc-color-console-error: #ff8a80;
-  --luc-color-console-success: #6fe3b4;
+  --luc-color-console-success: #6ff0c0;
+
+  /* ---- Gradients (brand moments: logo, header accent, celebration) ---- */
+  --luc-gradient-brand: linear-gradient(135deg, #5b3df2 0%, #ff4fa3 100%);
+  --luc-gradient-brand-soft: linear-gradient(135deg, #ece6ff 0%, #ffe6f2 100%);
 
   /* ---- Typography ---- */
   --luc-font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
@@ -58,8 +59,8 @@
   --luc-text-3xl: 2.25rem;
 
   --luc-weight-regular: 400;
-  --luc-weight-medium: 500;
-  --luc-weight-bold: 700;
+  --luc-weight-medium: 600;
+  --luc-weight-bold: 800;
 
   /* ---- Spacing scale ---- */
   --luc-space-1: 4px;
@@ -71,14 +72,14 @@
   --luc-space-7: 48px;
   --luc-space-8: 64px;
 
-  /* ---- Radii & shadow ---- */
-  --luc-radius-sm: 8px;
-  --luc-radius-md: 14px;
-  --luc-radius-lg: 22px;
+  /* ---- Radii & shadow (rounder + more colorful shadow = friendlier feel) ---- */
+  --luc-radius-sm: 10px;
+  --luc-radius-md: 16px;
+  --luc-radius-lg: 26px;
   --luc-radius-pill: 999px;
-  --luc-shadow-sm: 0 1px 2px rgba(28, 31, 46, 0.06);
-  --luc-shadow-md: 0 8px 24px rgba(28, 31, 46, 0.08);
-  --luc-shadow-lg: 0 16px 40px rgba(28, 31, 46, 0.14);
+  --luc-shadow-sm: 0 2px 6px rgba(91, 61, 242, 0.08);
+  --luc-shadow-md: 0 10px 28px rgba(91, 61, 242, 0.14);
+  --luc-shadow-lg: 0 20px 48px rgba(91, 61, 242, 0.22);
 
   /* ---- Motion ---- */
   --luc-motion-fast: 120ms;
