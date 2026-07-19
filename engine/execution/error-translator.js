@@ -11,7 +11,7 @@ let loadPromise = null;
 export const ErrorTranslator = {
   async load() {
     if (loadPromise) return loadPromise;
-    loadPromise = fetch('/content/shared/error-messages.python.json')
+    loadPromise = fetch('./content/shared/error-messages.python.json')
       .then((res) => res.json())
       .then((json) => (dictionary = json));
     return loadPromise;
