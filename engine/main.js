@@ -11,6 +11,9 @@ import { Modal } from '../components/modal/modal.js';
 import { Router } from './router/router.js';
 import { registerRoutes } from './router/route-registry.js';
 import { ProgressService } from './progress/progress-service.js';
+import { AchievementEngine } from './achievements/achievement-engine.js';
+import { AchievementToast } from '../components/toast/achievement-toast.js';
+
 
 /**
  * Boot sequence (documented order — Task 1.8):
@@ -23,7 +26,8 @@ import { ProgressService } from './progress/progress-service.js';
  */
 async function bootstrap() {
   installGlobalErrorHandler();
-
+  AchievementEngine.init();
+  AchievementToast.init();
   eventBus.on('app:fatalError', ({ error }) => {
     renderFatalError(error);
   });
