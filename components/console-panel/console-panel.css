@@ -1,0 +1,68 @@
+.luc-console__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--luc-space-2) var(--luc-space-3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--luc-font-mono);
+  font-size: var(--luc-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--luc-color-console-ink);
+}
+
+.luc-console__clear {
+  background: none;
+  border: none;
+  color: inherit;
+  opacity: 0.7;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.luc-console__clear:hover {
+  opacity: 1;
+}
+
+.luc-console__output {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--luc-space-3);
+  font-family: var(--luc-font-mono);
+  font-size: var(--luc-text-sm);
+}
+
+.luc-console__stdout {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.luc-console__empty {
+  color: rgba(232, 233, 243, 0.5);
+}
+
+.luc-console__error {
+  margin-top: var(--luc-space-3);
+  border-left: 3px solid var(--luc-color-console-error);
+  padding-left: var(--luc-space-3);
+}
+
+.luc-console__error-title {
+  color: var(--luc-color-console-error);
+  font-weight: var(--luc-weight-bold);
+}
+
+.luc-console__error-friendly {
+  margin-top: var(--luc-space-1);
+}
+
+.luc-console__error-raw {
+  margin-top: var(--luc-space-1);
+  opacity: 0.55;
+  font-size: var(--luc-text-xs);
+}
+
+.is-busy .luc-console__output {
+  opacity: 0.5;
+}

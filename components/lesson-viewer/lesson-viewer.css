@@ -1,0 +1,107 @@
+.luc-lesson__header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--luc-space-3);
+  margin-bottom: var(--luc-space-4);
+}
+
+.luc-lesson__number {
+  font-family: var(--luc-font-mono);
+  color: var(--luc-color-primary);
+  font-weight: var(--luc-weight-bold);
+}
+
+.luc-lesson__title {
+  font-size: var(--luc-text-2xl);
+}
+
+.luc-block-heading {
+  font-size: var(--luc-text-xl);
+  margin-top: var(--luc-space-5);
+}
+
+.luc-block-paragraph {
+  color: var(--luc-color-ink);
+  line-height: 1.65;
+}
+
+.luc-block-code {
+  background: var(--luc-color-surface-sunken);
+  border-radius: var(--luc-radius-sm);
+  padding: var(--luc-space-3);
+  font-family: var(--luc-font-mono);
+  font-size: var(--luc-text-sm);
+  overflow-x: auto;
+}
+
+.luc-block-tip {
+  display: flex;
+  gap: var(--luc-space-2);
+  background: var(--luc-color-accent-tint);
+  border-radius: var(--luc-radius-md);
+  padding: var(--luc-space-3) var(--luc-space-4);
+  margin: var(--luc-space-4) 0;
+}
+
+.luc-block-image {
+  max-width: 100%;
+  border-radius: var(--luc-radius-md);
+}
+
+/* Hints */
+.luc-hints {
+  margin-top: var(--luc-space-5);
+  border-top: 1px solid var(--luc-color-border);
+  padding-top: var(--luc-space-4);
+}
+
+.luc-hints__list {
+  margin: var(--luc-space-3) 0 0;
+  padding-left: var(--luc-space-5);
+  color: var(--luc-color-ink-soft);
+}
+
+/* Test results */
+.luc-test-summary {
+  margin-top: var(--luc-space-5);
+  padding: var(--luc-space-3) var(--luc-space-4);
+  border-radius: var(--luc-radius-md);
+  font-weight: var(--luc-weight-medium);
+}
+
+.luc-test-summary.is-pass {
+  background: var(--luc-color-success-tint);
+  color: var(--luc-color-success);
+}
+
+.luc-test-summary.is-fail {
+  background: var(--luc-color-error-tint);
+  color: var(--luc-color-error);
+}
+
+.luc-test-list {
+  list-style: none;
+  margin: var(--luc-space-3) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--luc-space-2);
+}
+
+.luc-test-item {
+  display: flex;
+  gap: var(--luc-space-2);
+  font-size: var(--luc-text-sm);
+}
+
+.luc-test-item__icon {
+  font-weight: var(--luc-weight-bold);
+}
+
+.luc-test-item.is-pass .luc-test-item__icon {
+  color: var(--luc-color-success);
+}
+
+.luc-test-item.is-fail .luc-test-item__icon {
+  color: var(--luc-color-error);
+}

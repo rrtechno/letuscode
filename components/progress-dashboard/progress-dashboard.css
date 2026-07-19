@@ -1,0 +1,48 @@
+.luc-progress-dash {
+  max-width: var(--luc-max-content-width);
+  margin: 0 auto;
+  padding: var(--luc-space-7) var(--luc-space-5);
+}
+
+.luc-progress-dash__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--luc-space-4);
+  margin-top: var(--luc-space-5);
+}
+
+.luc-progress-card {
+  background: var(--luc-color-surface);
+  border: 1px solid var(--luc-color-border);
+  border-radius: var(--luc-radius-lg);
+  padding: var(--luc-space-5);
+}
+
+.luc-progress-card__title {
+  font-weight: var(--luc-weight-medium);
+  margin-bottom: var(--luc-space-3);
+}
+
+.luc-progress-card__bar-track {
+  background: var(--luc-color-surface-sunken);
+  border-radius: var(--luc-radius-pill);
+  height: 10px;
+  overflow: hidden;
+}
+
+.luc-progress-card__bar-fill {
+  background: var(--luc-color-primary);
+  height: 100%;
+  transition: width var(--luc-motion-slow) var(--luc-ease);
+}
+
+.luc-progress-card__count {
+  margin-top: var(--luc-space-2);
+  font-size: var(--luc-text-sm);
+  color: var(--luc-color-ink-soft);
+}
+
+.luc-progress-dash__empty {
+  margin-top: var(--luc-space-6);
+  color: var(--luc-color-ink-soft);
+}

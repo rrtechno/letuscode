@@ -1,0 +1,28 @@
+.luc-editor-panel__toolbar {
+  border-bottom: 1px solid var(--luc-color-border);
+}
+
+.luc-editor-toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--luc-space-2);
+  padding: var(--luc-space-2) var(--luc-space-3);
+}
+
+.luc-editor-toolbar__run {
+  min-width: 96px;
+}
+
+.luc-editor-toolbar__spacer {
+  flex-grow: 1;
+}
+
+.luc-editor-toolbar__font-btn {
+  padding: var(--luc-space-1) var(--luc-space-2);
+  font-family: var(--luc-font-mono);
+}
+
+.luc-editor-panel__surface {
+  flex: 1;
+  min-height: 0;
+}

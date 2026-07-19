@@ -1,0 +1,108 @@
+/* Base reset — deliberately small, no CSS framework. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--luc-color-bg);
+  color: var(--luc-color-ink);
+  font-family: var(--luc-font-body);
+  font-size: var(--luc-text-base);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--luc-font-display);
+  margin: 0 0 var(--luc-space-3);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Visible focus ring everywhere — required for keyboard users of any age. */
+:focus-visible {
+  outline: 3px solid var(--luc-color-primary);
+  outline-offset: 2px;
+  border-radius: var(--luc-radius-sm);
+}
+
+/* ---- App shell grid ---- */
+.luc-shell {
+  display: grid;
+  grid-template-columns: var(--luc-sidebar-width) 1fr;
+  grid-template-rows: var(--luc-header-height) 1fr;
+  grid-template-areas:
+    'header header'
+    'sidebar main';
+  height: 100vh;
+}
+
+.luc-shell[data-sidebar='collapsed'] {
+  grid-template-columns: var(--luc-sidebar-width-collapsed) 1fr;
+}
+
+.luc-shell__header {
+  grid-area: header;
+}
+
+.luc-shell__sidebar {
+  grid-area: sidebar;
+  overflow-y: auto;
+  border-right: 1px solid var(--luc-color-border);
+  background: var(--luc-color-surface);
+}
+
+.luc-shell__main {
+  grid-area: main;
+  overflow: auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.luc-shell__breadcrumb-slot:empty {
+  display: none;
+}
+
+.luc-shell__page-content {
+  flex: 1;
+  min-height: 0;
+}
+
+.luc-shell__footer {
+  display: none; /* footer region exists for future use; not needed for MVP layout */
+}
+
+@media (max-width: 860px) {
+  .luc-shell {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'header'
+      'main';
+  }
+
+  .luc-shell__sidebar {
+    position: fixed;
+    inset: var(--luc-header-height) 0 0 0;
+    z-index: 20;
+    transform: translateX(-100%);
+    transition: transform var(--luc-motion-base) var(--luc-ease);
+  }
+
+  .luc-shell[data-sidebar='open'] .luc-shell__sidebar {
+    transform: translateX(0);
+  }
+}

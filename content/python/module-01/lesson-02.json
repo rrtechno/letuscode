@@ -1,0 +1,44 @@
+{
+  "id": "lesson-02",
+  "moduleId": "module-01",
+  "order": 2,
+  "title": "Talk to the Computer",
+  "estimatedMinutes": 5,
+  "contentBlocks": [
+    {
+      "type": "paragraph",
+      "text": "You can print() as many times as you like, and each one shows up on its own line."
+    },
+    {
+      "type": "code-sample",
+      "code": "print(\"I am learning Python!\")\nprint(\"This is fun.\")"
+    },
+    {
+      "type": "heading",
+      "text": "Your turn"
+    },
+    {
+      "type": "paragraph",
+      "text": "Write a print() statement that includes the word \"Python\" somewhere in the message. You can write anything you like around it!"
+    },
+    {
+      "type": "tip",
+      "text": "Comments start with a # symbol. Python ignores anything after a #, so you can leave yourself notes without them running as code."
+    }
+  ],
+  "starterCode": "# This line is a comment - Python skips it\n# Write a print() statement below that mentions Python\n",
+  "solutionCode": "print(\"I love Python!\")",
+  "testCases": [
+    {
+      "id": "mentions-python",
+      "type": "stdout-contains",
+      "expected": "Python",
+      "successMessage": "Nice — your message mentions Python!",
+      "failureMessage": "Your printed message should include the word \"Python\" somewhere."
+    }
+  ],
+  "hints": [
+    "Use print(\"...\") with your own sentence inside the quotes.",
+    "Make sure the word Python (capital P) is spelled correctly inside your quotes."
+  ]
+}

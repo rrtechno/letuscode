@@ -1,0 +1,11 @@
+{
+  "SyntaxError": "Python got confused reading your code — something is written in a way it doesn't understand yet, like a missing colon or a mismatched bracket.",
+  "IndentationError": "Python cares a lot about spacing! A line isn't indented the way Python expects — check that lines inside a block line up evenly.",
+  "NameError": "Python doesn't recognize one of the names in your code. Double-check the spelling, or make sure you created that variable before using it.",
+  "TypeError": "You're asking Python to do something with two kinds of values that don't work together, like adding a number and a word.",
+  "ValueError": "Python understood what you were asking, but the actual value you gave it doesn't make sense for that operation.",
+  "ZeroDivisionError": "Your code tried to divide a number by zero, which isn't allowed in math or in Python.",
+  "IndexError": "Your code tried to reach an item in a list that isn't there — check that the position number exists.",
+  "AttributeError": "Your code tried to use a feature that this type of value doesn't have. Double-check the spelling or the type of the value.",
+  "TimeoutError": "Your code took too long to run — it might be stuck in a loop that never ends. Check for a loop condition that never becomes false."
+}

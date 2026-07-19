@@ -1,0 +1,50 @@
+.luc-sidebar {
+  padding: var(--luc-space-4) var(--luc-space-2);
+}
+
+.luc-sidebar__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.luc-sidebar__module {
+  font-family: var(--luc-font-mono);
+  font-size: var(--luc-text-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--luc-color-ink-faint);
+  padding: var(--luc-space-4) var(--luc-space-3) var(--luc-space-1);
+}
+
+.luc-sidebar__item {
+  display: flex;
+  align-items: center;
+  gap: var(--luc-space-2);
+  padding: var(--luc-space-2) var(--luc-space-3);
+  border-radius: var(--luc-radius-sm);
+  text-decoration: none;
+  color: var(--luc-color-ink);
+  font-size: var(--luc-text-sm);
+}
+
+.luc-sidebar__item:hover {
+  background: var(--luc-color-surface-sunken);
+}
+
+.luc-sidebar__item.is-active {
+  background: var(--luc-color-primary-tint);
+  color: var(--luc-color-primary);
+  font-weight: var(--luc-weight-medium);
+}
+
+.luc-sidebar__check {
+  width: 18px;
+  flex-shrink: 0;
+  color: var(--luc-color-success);
+  font-weight: var(--luc-weight-bold);
+  text-align: center;
+}

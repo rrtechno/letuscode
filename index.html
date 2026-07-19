@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Let Us Code — Learn to code, right in your browser</title>
+  <meta name="description" content="Let Us Code is a browser-based coding platform for kids, starting with Python." />
+
+  <!-- Design tokens must load before any component stylesheet. -->
+  <link rel="stylesheet" href="/assets/styles/tokens.css" />
+  <link rel="stylesheet" href="/assets/styles/layout.css" />
+
+  <link rel="stylesheet" href="/components/header/header.css" />
+  <link rel="stylesheet" href="/components/sidebar/sidebar.css" />
+  <link rel="stylesheet" href="/components/breadcrumb/breadcrumb.css" />
+  <link rel="stylesheet" href="/components/modal/modal.css" />
+  <link rel="stylesheet" href="/components/track-selector/track-selector.css" />
+  <link rel="stylesheet" href="/components/workspace/workspace-layout.css" />
+  <link rel="stylesheet" href="/components/lesson-viewer/lesson-viewer.css" />
+  <link rel="stylesheet" href="/components/editor-panel/editor-panel.css" />
+  <link rel="stylesheet" href="/components/console-panel/console-panel.css" />
+  <link rel="stylesheet" href="/components/progress-dashboard/progress-dashboard.css" />
+
+  <style>
+    /* Minimal inline styles for states that exist before any component CSS
+       would apply (fatal-error screen, not-found page) — intentionally
+       tiny and kept here rather than a whole extra stylesheet request. */
+    .luc-fatal-error, .luc-not-found, .luc-lesson-error {
+      max-width: 480px;
+      margin: 15vh auto;
+      text-align: center;
+      font-family: var(--luc-font-body, sans-serif);
+      padding: 0 var(--luc-space-4, 16px);
+    }
+    .luc-fatal-error button {
+      margin-top: 16px;
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: none;
+      background: var(--luc-color-primary, #4c56e8);
+      color: #fff;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="app-root"></div>
+
+  <script type="module" src="/engine/main.js"></script>
+</body>
+</html>

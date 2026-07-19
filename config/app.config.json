@@ -1,0 +1,20 @@
+{
+  "appName": "Let Us Code",
+  "version": "0.1.0",
+  "schemaVersion": 1,
+  "defaultTrackId": "python",
+  "logLevel": "info",
+  "execution": {
+    "timeoutMs": 8000
+  },
+  "editor": {
+    "defaultFontSize": 16,
+    "minFontSize": 12,
+    "maxFontSize": 28,
+    "tabSize": 4
+  },
+  "features": {
+    "localUsageInsights": false,
+    "soundEffects": false
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "lesson-03",
+  "moduleId": "module-01",
+  "order": 3,
+  "title": "Variables",
+  "estimatedMinutes": 8,
+  "contentBlocks": [
+    {
+      "type": "paragraph",
+      "text": "A variable is a labeled box that stores a value so you can use it later. You create one by giving it a name and using the = sign."
+    },
+    {
+      "type": "code-sample",
+      "code": "age = 12\nprint(age)"
+    },
+    {
+      "type": "paragraph",
+      "text": "Notice there are no quotation marks around 12 — that's because it's a number, not text."
+    },
+    {
+      "type": "heading",
+      "text": "Your turn"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a variable named score, set it equal to the number 100, and then print it."
+    }
+  ],
+  "starterCode": "# Create a variable called score set to 100\n# Then print it\n",
+  "solutionCode": "score = 100\nprint(score)",
+  "testCases": [
+    {
+      "id": "score-variable-is-100",
+      "type": "variable-equals",
+      "variableName": "score",
+      "expected": 100,
+      "successMessage": "score is set to exactly the right value!",
+      "failureMessage": "Make sure you have a variable named score set to 100."
+    },
+    {
+      "id": "prints-score",
+      "type": "stdout-contains",
+      "expected": "100",
+      "successMessage": "And you printed it too!",
+      "failureMessage": "Don't forget to print(score) so we can see the value."
+    }
+  ],
+  "hints": [
+    "Create the variable first: score = 100",
+    "Then, on its own line, print it: print(score)"
+  ]
+}

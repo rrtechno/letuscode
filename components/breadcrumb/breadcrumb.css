@@ -1,0 +1,26 @@
+.luc-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--luc-space-2);
+  font-size: var(--luc-text-sm);
+  color: var(--luc-color-ink-soft);
+  padding: var(--luc-space-3) var(--luc-space-5) 0;
+}
+
+.luc-breadcrumb__link {
+  color: var(--luc-color-ink-soft);
+  text-decoration: none;
+}
+
+.luc-breadcrumb__link:hover {
+  color: var(--luc-color-primary);
+}
+
+.luc-breadcrumb__current {
+  color: var(--luc-color-ink);
+  font-weight: var(--luc-weight-medium);
+}
+
+.luc-breadcrumb__sep {
+  color: var(--luc-color-ink-faint);
+}

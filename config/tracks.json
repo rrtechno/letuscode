@@ -1,0 +1,54 @@
+{
+  "tracks": [
+    {
+      "id": "python",
+      "displayName": "Python",
+      "tagline": "Write real code and watch it run.",
+      "icon": "🐍",
+      "status": "active",
+      "contentAdapter": "python",
+      "executionAdapter": "python",
+      "manifestUrl": "/content/python/manifest.json"
+    },
+    {
+      "id": "ai",
+      "displayName": "AI",
+      "tagline": "Teach a computer to think.",
+      "icon": "🤖",
+      "status": "comingSoon",
+      "contentAdapter": null,
+      "executionAdapter": null,
+      "manifestUrl": null
+    },
+    {
+      "id": "streamlit",
+      "displayName": "Streamlit",
+      "tagline": "Build apps you can click.",
+      "icon": "🧩",
+      "status": "comingSoon",
+      "contentAdapter": null,
+      "executionAdapter": null,
+      "manifestUrl": null
+    },
+    {
+      "id": "data-science",
+      "displayName": "Data Science",
+      "tagline": "Find stories hidden in numbers.",
+      "icon": "📊",
+      "status": "comingSoon",
+      "contentAdapter": null,
+      "executionAdapter": null,
+      "manifestUrl": null
+    },
+    {
+      "id": "cloud",
+      "displayName": "Cloud",
+      "tagline": "Put your projects on the internet.",
+      "icon": "☁️",
+      "status": "comingSoon",
+      "contentAdapter": null,
+      "executionAdapter": null,
+      "manifestUrl": null
+    }
+  ]
+}

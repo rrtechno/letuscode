@@ -1,0 +1,72 @@
+.luc-modal__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(28, 31, 46, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: var(--luc-space-4);
+}
+
+.luc-modal__overlay[hidden] {
+  display: none;
+}
+
+.luc-modal__dialog {
+  background: var(--luc-color-surface);
+  border-radius: var(--luc-radius-lg);
+  box-shadow: var(--luc-shadow-lg);
+  max-width: 480px;
+  width: 100%;
+  padding: var(--luc-space-6);
+}
+
+.luc-modal__title {
+  margin-bottom: var(--luc-space-3);
+}
+
+.luc-modal__body {
+  color: var(--luc-color-ink-soft);
+  margin-bottom: var(--luc-space-5);
+}
+
+.luc-modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--luc-space-3);
+}
+
+/* Shared button primitives used across modal, toolbar, toasts, etc. */
+.luc-btn {
+  font-family: var(--luc-font-body);
+  font-weight: var(--luc-weight-medium);
+  font-size: var(--luc-text-sm);
+  padding: var(--luc-space-2) var(--luc-space-4);
+  border-radius: var(--luc-radius-pill);
+  border: 1px solid transparent;
+  transition: transform var(--luc-motion-fast) var(--luc-ease), background var(--luc-motion-fast) var(--luc-ease);
+}
+
+.luc-btn:active {
+  transform: scale(0.97);
+}
+
+.luc-btn--primary {
+  background: var(--luc-color-primary);
+  color: var(--luc-color-primary-ink);
+}
+
+.luc-btn--primary:hover {
+  background: var(--luc-color-primary-hover);
+}
+
+.luc-btn--ghost {
+  background: transparent;
+  border-color: var(--luc-color-border);
+  color: var(--luc-color-ink);
+}
+
+.luc-btn--ghost:hover {
+  background: var(--luc-color-surface-sunken);
+}

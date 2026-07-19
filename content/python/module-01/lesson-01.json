@@ -1,0 +1,48 @@
+{
+  "id": "lesson-01",
+  "moduleId": "module-01",
+  "order": 1,
+  "title": "Say Hello",
+  "estimatedMinutes": 5,
+  "contentBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Every programmer's first trick is making the computer say something. In Python, you do that with print()."
+    },
+    {
+      "type": "code-sample",
+      "code": "print(\"Hello, World!\")"
+    },
+    {
+      "type": "paragraph",
+      "text": "Whatever you put between the quotation marks inside print() shows up on the screen exactly as you typed it."
+    },
+    {
+      "type": "tip",
+      "text": "Don't forget the quotation marks around your message — Python needs them to know where your text starts and ends."
+    },
+    {
+      "type": "heading",
+      "text": "Your turn"
+    },
+    {
+      "type": "paragraph",
+      "text": "In the editor, write one line of code that prints exactly: Hello, World!"
+    }
+  ],
+  "starterCode": "# Use print() to make Python say something\n",
+  "solutionCode": "print(\"Hello, World!\")",
+  "testCases": [
+    {
+      "id": "prints-hello-world",
+      "type": "stdout-equals",
+      "expected": "Hello, World!",
+      "successMessage": "You did it — Python said hello!",
+      "failureMessage": "We were expecting the output to be exactly: Hello, World!"
+    }
+  ],
+  "hints": [
+    "Start with the word print, then a set of parentheses: print()",
+    "Put your message inside quotation marks, between the parentheses: print(\"Hello, World!\")"
+  ]
+}
