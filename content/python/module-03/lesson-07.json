@@ -1,0 +1,45 @@
+{
+  "id": "lesson-07",
+  "moduleId": "module-03",
+  "order": 7,
+  "title": "Making Decisions",
+  "estimatedMinutes": 8,
+  "contentBlocks": [
+    {
+      "type": "paragraph",
+      "text": "if lets your code make decisions. If the condition is True, the indented code below it runs."
+    },
+    {
+      "type": "code-sample",
+      "code": "age = 12\nif age >= 10:\n    print(\"You can join the coding club!\")\nelse:\n    print(\"Almost old enough!\")"
+    },
+    {
+      "type": "tip",
+      "text": "Don't forget the colon : at the end of the if line, and indent the line(s) underneath it."
+    },
+    {
+      "type": "heading",
+      "text": "Your turn"
+    },
+    {
+      "type": "paragraph",
+      "text": "There's a variable called score. Write an if/else that prints \"You win!\" if score is greater than or equal to 50, otherwise prints \"Try again!\"."
+    }
+  ],
+  "starterCode": "score = 75\n\n# Write your if/else below\n",
+  "solutionCode": "score = 75\n\nif score >= 50:\n    print(\"You win!\")\nelse:\n    print(\"Try again!\")",
+  "testCases": [
+    {
+      "id": "prints-you-win",
+      "type": "stdout-equals",
+      "expected": "You win!",
+      "successMessage": "Your if statement worked perfectly!",
+      "failureMessage": "With score = 75, your code should print exactly: You win!"
+    }
+  ],
+  "hints": [
+    "Start with: if score >= 50:",
+    "Indent the next line and print(\"You win!\") inside the if block.",
+    "Add else: on its own line, then indent print(\"Try again!\") underneath it."
+  ]
+}

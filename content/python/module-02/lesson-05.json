@@ -1,0 +1,41 @@
+{
+  "id": "lesson-05",
+  "moduleId": "module-02",
+  "order": 5,
+  "title": "Numbers and Math",
+  "estimatedMinutes": 7,
+  "contentBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Python can do math for you. Try the basics: + add, - subtract, * multiply, / divide."
+    },
+    {
+      "type": "code-sample",
+      "code": "apples = 3\noranges = 5\ntotal = apples + oranges\nprint(total)"
+    },
+    {
+      "type": "heading",
+      "text": "Your turn"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a variable named total that equals 7 times 6, then print it."
+    }
+  ],
+  "starterCode": "# Multiply 7 by 6 and store it in a variable called total\n",
+  "solutionCode": "total = 7 * 6\nprint(total)",
+  "testCases": [
+    {
+      "id": "total-is-42",
+      "type": "variable-equals",
+      "variableName": "total",
+      "expected": 42,
+      "successMessage": "42 — exactly right!",
+      "failureMessage": "Make sure total is set to 7 * 6."
+    }
+  ],
+  "hints": [
+    "Use the * symbol for multiplication: total = 7 * 6",
+    "Don't forget to print(total) so you can see the answer."
+  ]
+}

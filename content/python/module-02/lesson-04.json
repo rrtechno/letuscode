@@ -1,0 +1,44 @@
+{
+  "id": "lesson-04",
+  "moduleId": "module-02",
+  "order": 4,
+  "title": "Strings",
+  "estimatedMinutes": 7,
+  "contentBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Text in Python is called a string. You can join two strings together with a + sign — this is called concatenation."
+    },
+    {
+      "type": "code-sample",
+      "code": "first = \"Ada\"\nlast = \"Lovelace\"\nprint(first + \" \" + last)"
+    },
+    {
+      "type": "heading",
+      "text": "Your turn"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a variable named greeting that combines \"Hello, \" with your own name, then print it. For example: Hello, Sam"
+    },
+    {
+      "type": "tip",
+      "text": "Remember the space! \"Hello, \" + \"Sam\" gives Hello, Sam — but \"Hello,\" + \"Sam\" gives Hello,Sam with no space."
+    }
+  ],
+  "starterCode": "# Build a greeting by joining strings together\ngreeting = \"Hello, \" + \"____\"\nprint(greeting)\n",
+  "solutionCode": "greeting = \"Hello, \" + \"Sam\"\nprint(greeting)",
+  "testCases": [
+    {
+      "id": "greeting-starts-with-hello",
+      "type": "stdout-contains",
+      "expected": "Hello,",
+      "successMessage": "Your greeting is there!",
+      "failureMessage": "Your printed output should start with \"Hello, \" followed by a name."
+    }
+  ],
+  "hints": [
+    "Use the + operator to join two strings: \"Hello, \" + \"Sam\"",
+    "Store the result in a variable called greeting, then print(greeting)."
+  ]
+}

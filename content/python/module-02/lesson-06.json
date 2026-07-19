@@ -1,0 +1,45 @@
+{
+  "id": "lesson-06",
+  "moduleId": "module-02",
+  "order": 6,
+  "title": "True or False",
+  "estimatedMinutes": 6,
+  "contentBlocks": [
+    {
+      "type": "paragraph",
+      "text": "A boolean is a value that's either True or False. Comparing two things with == gives you a boolean answer."
+    },
+    {
+      "type": "code-sample",
+      "code": "is_sunny = True\nprint(5 == 5)\nprint(5 == 6)"
+    },
+    {
+      "type": "heading",
+      "text": "Your turn"
+    },
+    {
+      "type": "paragraph",
+      "text": "Create a variable named is_even set to whether 10 is even — that is, whether 10 % 2 == 0 — then print it."
+    },
+    {
+      "type": "tip",
+      "text": "% is the \"remainder\" operator. 10 % 2 equals 0 because 10 divides evenly by 2."
+    }
+  ],
+  "starterCode": "# Set is_even to True or False based on whether 10 is even\nis_even = 10 % 2 == 0\nprint(is_even)\n",
+  "solutionCode": "is_even = 10 % 2 == 0\nprint(is_even)",
+  "testCases": [
+    {
+      "id": "is-even-is-true",
+      "type": "variable-equals",
+      "variableName": "is_even",
+      "expected": true,
+      "successMessage": "Correct — 10 is even!",
+      "failureMessage": "is_even should be True, since 10 divides evenly by 2."
+    }
+  ],
+  "hints": [
+    "% gives you the remainder of a division. 10 % 2 is 0.",
+    "Comparing 0 == 0 gives True."
+  ]
+}

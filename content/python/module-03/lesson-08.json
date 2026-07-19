@@ -1,0 +1,41 @@
+{
+  "id": "lesson-08",
+  "moduleId": "module-03",
+  "order": 8,
+  "title": "Comparing Things",
+  "estimatedMinutes": 6,
+  "contentBlocks": [
+    {
+      "type": "paragraph",
+      "text": "Python has six comparison operators: == equal, != not equal, > greater than, < less than, >= greater or equal, <= less or equal."
+    },
+    {
+      "type": "code-sample",
+      "code": "print(7 > 3)\nprint(7 != 7)"
+    },
+    {
+      "type": "heading",
+      "text": "Your turn"
+    },
+    {
+      "type": "paragraph",
+      "text": "There are two variables, coins and price. Create a variable named can_afford that is True if coins is greater than or equal to price."
+    }
+  ],
+  "starterCode": "coins = 40\nprice = 25\n\n# Set can_afford based on whether coins >= price\n",
+  "solutionCode": "coins = 40\nprice = 25\ncan_afford = coins >= price\nprint(can_afford)",
+  "testCases": [
+    {
+      "id": "can-afford-is-true",
+      "type": "variable-equals",
+      "variableName": "can_afford",
+      "expected": true,
+      "successMessage": "Right — 40 is enough to afford 25!",
+      "failureMessage": "can_afford should be coins >= price, which is True here."
+    }
+  ],
+  "hints": [
+    "Use >= to compare: can_afford = coins >= price",
+    "Print it so you can check your answer: print(can_afford)"
+  ]
+}

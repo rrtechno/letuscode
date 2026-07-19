@@ -1,0 +1,40 @@
+{
+  "id": "lesson-09",
+  "moduleId": "module-03",
+  "order": 9,
+  "title": "Repeat With a Loop",
+  "estimatedMinutes": 8,
+  "contentBlocks": [
+    {
+      "type": "paragraph",
+      "text": "A for loop repeats code a set number of times. range(5) counts 0, 1, 2, 3, 4 — five numbers, starting at 0."
+    },
+    {
+      "type": "code-sample",
+      "code": "for i in range(3):\n    print(\"Coding is fun!\")"
+    },
+    {
+      "type": "heading",
+      "text": "Your turn"
+    },
+    {
+      "type": "paragraph",
+      "text": "Write a loop that prints the word \"Blast off in \" followed by the countdown number, counting from 5 down would be tricky — instead, just print the numbers 0 through 4 using range(5), one per line."
+    }
+  ],
+  "starterCode": "# Print the numbers 0 through 4, one per line\n",
+  "solutionCode": "for i in range(5):\n    print(i)",
+  "testCases": [
+    {
+      "id": "prints-zero-through-four",
+      "type": "stdout-equals",
+      "expected": "0\n1\n2\n3\n4",
+      "successMessage": "Your loop counted perfectly!",
+      "failureMessage": "Expected the numbers 0, 1, 2, 3, 4 printed one per line."
+    }
+  ],
+  "hints": [
+    "Use for i in range(5): to loop 5 times.",
+    "Indent print(i) underneath the for line."
+  ]
+}
