@@ -271,3 +271,77 @@ h1, h2, h3, .display {
   border-radius: var(--radius);
   overflow: hidden;
 }
+
+/* ---------- Progress tracking UI ---------- */
+.level-card.completed {
+  border-left-color: var(--leaf);
+}
+.level-card.completed .level-badge {
+  background: var(--leaf);
+  color: white;
+}
+.level-card.locked {
+  opacity: 0.55;
+  pointer-events: none;
+  border-left-color: #ccc;
+}
+.level-card.locked .level-badge {
+  background: #ccc !important;
+  color: white;
+}
+
+.mini-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+.mini-progress-bar {
+  flex: 1;
+  max-width: 160px;
+  height: 8px;
+  background: #eee;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.mini-progress-fill {
+  height: 100%;
+  background: var(--leaf);
+  border-radius: 999px;
+}
+.mini-progress span {
+  font-size: 0.8rem;
+  color: #777;
+  font-weight: 700;
+}
+
+.reset-link {
+  display: block;
+  text-align: center;
+  margin-top: 24px;
+  color: #999;
+  font-size: 0.85rem;
+  text-decoration: underline;
+}
+
+.complete-row {
+  text-align: center;
+  margin: 28px 0;
+}
+.btn-complete {
+  background: var(--coral);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #c8493c;
+}
+.btn-complete:active { transform: translateY(2px); box-shadow: none; }
+.btn-complete.done {
+  background: var(--leaf);
+  box-shadow: 0 4px 0 #367a58;
+}
