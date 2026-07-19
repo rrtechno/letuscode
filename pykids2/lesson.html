@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lesson | PyKids</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
+<script src="assets/js/runner.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="snake">🐍</span>
+  <span class="logo" id="site-title">PyKids</span>
+</div>
+
+<div class="lesson-wrap">
+  <div class="lesson-header">
+    <div class="eyebrow" id="lesson-eyebrow">Loading…</div>
+    <h1 id="lesson-title"></h1>
+  </div>
+
+  <div id="lesson-body"></div>
+
+  <div class="nav-row" id="lesson-nav"></div>
+</div>
+
+<script src="assets/js/app.js"></script>
+<script>renderLessonPage();</script>
+</body>
+</html>
