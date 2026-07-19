@@ -23,18 +23,44 @@ async function renderHomePage() {
   document.getElementById("site-tagline").textContent = config.tagline;
 
   const wrap = document.getElementById("track-list");
-  config.tracks.forEach((track) => {
+
+  for (const track of config.tracks) {
     const locked = track.status !== "active";
     const card = el("a", `track-card ${locked ? "locked" : ""}`);
     card.href = locked ? "#" : `track.html?track=${track.id}`;
+
+    let progressHtml = "";
+    if (!locked) {
+      const trackData = await loadJSON(track.file);
+      const { completed, total } = trackProgressSummary(track.id, trackData.lessons);
+      if (total > 0) {
+        progressHtml = `<div class="mini-progress">
+          <div class="mini-progress-bar"><div class="mini-progress-fill" style="width:${(completed / total) * 100}%"></div></div>
+          <span>${completed} / ${total} lessons</span>
+        </div>`;
+      }
+    }
+
     card.innerHTML = `
       <div class="track-icon track-${track.color}">${track.icon}</div>
       <div class="track-info">
         <h3>${track.title} ${locked ? '<span class="badge-soon">Coming soon</span>' : ""}</h3>
         <p>${track.description}</p>
+        ${progressHtml}
       </div>`;
     wrap.appendChild(card);
-  });
+  }
+
+  const resetLink = el("a", "reset-link", "Reset my progress");
+  resetLink.href = "#";
+  resetLink.onclick = (e) => {
+    e.preventDefault();
+    if (confirm("This clears all your completed lessons on this device. Continue?")) {
+      resetAllProgress();
+      location.reload();
+    }
+  };
+  document.getElementById("track-list").after(resetLink);
 }
 
 // ---------- TRACK PAGE (track.html?track=ID) ----------
@@ -59,10 +85,12 @@ async function renderTrackPage() {
   }
 
   track.lessons.forEach((lesson, i) => {
-    const card = el("a", "level-card");
-    card.href = `lesson.html?track=${trackId}&lesson=${lesson.id}`;
+    const complete = isLessonComplete(trackId, lesson.id);
+    const unlocked = isLessonUnlocked(trackId, track.lessons, i);
+    const card = el("a", `level-card ${!unlocked ? "locked" : ""} ${complete ? "completed" : ""}`);
+    card.href = unlocked ? `lesson.html?track=${trackId}&lesson=${lesson.id}` : "#";
     card.innerHTML = `
-      <div class="level-badge">${i + 1}</div>
+      <div class="level-badge">${complete ? "✓" : (unlocked ? i + 1 : "🔒")}</div>
       <div class="level-info">
         <h3>${lesson.title}</h3>
         <p>${lesson.summary || ""}</p>
@@ -97,6 +125,22 @@ async function renderLessonPage() {
   const idx = track.lessons.findIndex((l) => l.id === lessonId);
   const prev = track.lessons[idx - 1];
   const next = track.lessons[idx + 1];
+
+  const alreadyDone = isLessonComplete(trackId, lessonId);
+  const completeBox = el("div", "complete-row");
+  const completeBtn = el("button", `btn-complete ${alreadyDone ? "done" : ""}`,
+    alreadyDone ? "✅ Completed" : "Mark Complete ✓");
+  completeBtn.onclick = () => {
+    markLessonComplete(trackId, lessonId);
+    if (next) {
+      window.location.href = `lesson.html?track=${trackId}&lesson=${next.id}`;
+    } else {
+      window.location.href = `track.html?track=${trackId}`;
+    }
+  };
+  completeBox.appendChild(completeBtn);
+  body.appendChild(completeBox);
+
   const navRow = document.getElementById("lesson-nav");
   navRow.innerHTML = `
     ${prev ? `<a href="lesson.html?track=${trackId}&lesson=${prev.id}">← ${prev.title}</a>` : `<a href="track.html?track=${trackId}">← Back to Track</a>`}
