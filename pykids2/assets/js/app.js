@@ -60,7 +60,15 @@ async function renderHomePage() {
       location.reload();
     }
   };
+
+  const [badgesConfig, summaries] = await Promise.all([loadBadgesConfig(), getAllTrackSummaries()]);
+  const earned = computeEarnedBadgeIds(badgesConfig, summaries);
+  const badgesLink = el("a", "badges-link",
+    `🏅 ${earned.size} / ${badgesConfig.badges.length} badges earned`);
+  badgesLink.href = "badges.html";
+
   document.getElementById("track-list").after(resetLink);
+  document.getElementById("track-list").after(badgesLink);
 }
 
 // ---------- TRACK PAGE (track.html?track=ID) ----------
@@ -130,12 +138,29 @@ async function renderLessonPage() {
   const completeBox = el("div", "complete-row");
   const completeBtn = el("button", `btn-complete ${alreadyDone ? "done" : ""}`,
     alreadyDone ? "✅ Completed" : "Mark Complete ✓");
-  completeBtn.onclick = () => {
+  completeBtn.onclick = async () => {
+    const badgesConfig = await loadBadgesConfig();
+    const before = computeEarnedBadgeIds(badgesConfig, await getAllTrackSummaries());
+
     markLessonComplete(trackId, lessonId);
-    if (next) {
-      window.location.href = `lesson.html?track=${trackId}&lesson=${next.id}`;
+
+    const after = computeEarnedBadgeIds(badgesConfig, await getAllTrackSummaries());
+    const newBadgeIds = [...after].filter((id) => !before.has(id));
+    const newBadges = badgesConfig.badges.filter((b) => newBadgeIds.includes(b.id));
+
+    const goNext = () => {
+      if (next) {
+        window.location.href = `lesson.html?track=${trackId}&lesson=${next.id}`;
+      } else {
+        window.location.href = `track.html?track=${trackId}`;
+      }
+    };
+
+    if (newBadges.length > 0) {
+      newBadges.forEach((b, i) => setTimeout(() => showBadgeToast(b), i * 400));
+      setTimeout(goNext, 1600 + newBadges.length * 400);
     } else {
-      window.location.href = `track.html?track=${trackId}`;
+      goNext();
     }
   };
   completeBox.appendChild(completeBtn);
