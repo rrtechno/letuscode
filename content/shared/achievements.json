@@ -1,0 +1,52 @@
+{
+  "achievements": [
+    {
+      "id": "first-lesson",
+      "title": "First Steps",
+      "description": "Complete your first lesson.",
+      "icon": "🌱",
+      "triggerType": "lessonCount",
+      "triggerValue": 1
+    },
+    {
+      "id": "five-lessons",
+      "title": "Getting the Hang of It",
+      "description": "Complete 5 lessons.",
+      "icon": "🔥",
+      "triggerType": "lessonCount",
+      "triggerValue": 5
+    },
+    {
+      "id": "module-master",
+      "title": "Module Master",
+      "description": "Finish every lesson in a track.",
+      "icon": "🏆",
+      "triggerType": "trackComplete",
+      "triggerValue": 1
+    },
+    {
+      "id": "three-day-streak",
+      "title": "On a Roll",
+      "description": "Code 3 days in a row.",
+      "icon": "⚡",
+      "triggerType": "streak",
+      "triggerValue": 3
+    },
+    {
+      "id": "seven-day-streak",
+      "title": "Unstoppable",
+      "description": "Code 7 days in a row.",
+      "icon": "🚀",
+      "triggerType": "streak",
+      "triggerValue": 7
+    },
+    {
+      "id": "hint-free",
+      "title": "Sharp Mind",
+      "description": "Finish a lesson without using any hints.",
+      "icon": "🧠",
+      "triggerType": "hintFree",
+      "triggerValue": 0
+    }
+  ]
+}
